@@ -1,6 +1,14 @@
-
 export default {
   mode: 'universal',
+
+  generate: {
+    routes: [
+      '/posts/balut',
+      '/posts/whereIsIt',
+      '/posts/how'
+    ]
+  },
+
   /*
   ** Headers of the page
   */
@@ -23,6 +31,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/style.css'
   ],
   /*
   ** Plugins to load before mounting the App
