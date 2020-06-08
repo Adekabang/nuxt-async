@@ -37,6 +37,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/axios'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -53,7 +54,7 @@ export default {
   ** axios configuration
   */
   axios: {
-    baseUrl: 'https://jsonplaceholder.typicode.com'
+    baseURL: 'https://jsonplaceholder.typicode.com/'
   },
   /*
   ** Build configuration
