@@ -24,7 +24,6 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import axios from 'axios'
 export default {
   components: {
     Logo
@@ -40,9 +39,9 @@ export default {
       ]
     }
   },
-  async asyncData () {
-    let response = await axios.get('https://jsonplaceholder.typicode.com/posts')
-    return {posts: response.data}
+  async asyncData ({$axios}) {
+    let posts = await $axios.$get('https://jsonplaceholder.typicode.com/posts')
+    return {posts}
   }
 }
 </script>
