@@ -38,6 +38,19 @@ export default {
         { name: 'twitter:card', content: 'summary_large_image'}
       ]
     }
+  },
+  data () {
+    return {
+      posts: []
+    }
+  },
+  mounted () {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => {
+      response.json().then(posts => {
+        this.posts = posts
+      })
+    })
   }
 }
 </script>
